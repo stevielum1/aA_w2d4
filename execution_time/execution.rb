@@ -1,4 +1,5 @@
-
+#(n^2 time)
+#O(1) space
 def my_min(arr)
   min = arr.first
   arr.each_with_index do |el1, idx1|
@@ -9,12 +10,16 @@ def my_min(arr)
   min
 end
 
+#(O(n) time)
+#(O(1) space)
 def my_min2(arr)
   min = arr.first
   arr.each { |el| min = el if el < min }
   min
 end
 
+#(n^3 time)
+#n space
 def largest_contiguous_subsum(arr)
   max = arr.first
   arr.each_index do |idx1|
@@ -28,6 +33,8 @@ def largest_contiguous_subsum(arr)
   max
 end
 
+#(o(n) time)
+#O(1) space
 def optimized_largest_subsum(arr)
   max = arr.first
   sum = arr.first 

@@ -29,6 +29,8 @@ def merge(left, right)
   result + left + right
 end 
 
+#(nlogn time)
+#space O(n)
 def okay_two_sum?(arr, target_sum)
   sorted = merge_sort(arr)
   first = 0
@@ -48,6 +50,7 @@ def okay_two_sum?(arr, target_sum)
   false 
 end 
 
+#O(n) time, space
 def two_sum?(arr, target_sum)
   hash = Hash.new
   arr.each_with_index do |el, idx|

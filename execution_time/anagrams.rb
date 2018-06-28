@@ -1,9 +1,14 @@
+#(O(n!) time)
+#O(n!) space 
 def first_anagram?(first, second)
   anagrams = first.split("").permutation.to_a
   anagrams = anagrams.map {|el| el.join("")}
   anagrams.include?(second)
 end 
 
+
+#O(n^2) time
+#O(n) space 
 def second_anagram?(first, second)
   first = first.split("")
   second = second.split("")
@@ -18,10 +23,14 @@ def second_anagram?(first, second)
   first == second
 end
 
+#O(n^2) quicksort, O(nlogn) if mergesort
+#O(2n) space
 def third_anagram?(first, second)
   first.chars.sort == second.chars.sort
 end
 
+#O(n) time
+#O(1) space
 def fourth_anagram?(first, second)
   hash = Hash.new(0)
   first.chars.each do |char|
